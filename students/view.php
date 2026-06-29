@@ -43,6 +43,16 @@ if (isset($_GET['search'])) {
         <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     </div>
     <?php } ?>
+
+    <?php if (isset($_SESSION['error'])) { ?>
+    <div class="alert alert-danger alert-dismissible fade show">
+        <?php
+        echo $_SESSION['error'];
+        unset($_SESSION['error']);
+        ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <?php } ?>
     
 <div class="card shadow border-0 mb-4">
 
@@ -210,7 +220,7 @@ Edit
 <a
 href="delete.php?id=<?php echo $student['id']; ?>"
 class="btn btn-danger btn-sm"
-onclick="return confirm('Are you sure you want to delete this student?');">
+onclick="return confirm('Are you sure you want to delete this student? This action cannot be undone.');">
 
 <i class="bi bi-trash"></i>
 
