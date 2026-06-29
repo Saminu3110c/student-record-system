@@ -15,19 +15,19 @@
 
 ## Project Structure
 
-student-record-system/
-│
-├── includes/
-│   ├── db.php
-│   ├── header.php
-│   ├── footer.php
-│   └── navbar.php
-│
-├── students/
-│   ├── add.php
-│   ├── edit.php
-│   ├── delete.php
-│   └── view.php
-│
-├── index.php
-└── student_records.sql (To be exported)
+    student-record-system/
+    │
+    ├── includes/
+    │   ├── db.php
+    │   ├── header.php
+    │   ├── footer.php
+    │   └── navbar.php
+    │
+    ├── students/
+    │   ├── add.php
+    │   ├── edit.php
+    │   ├── delete.php
+    │   └── view.php
+    │
+    ├── index.php
+    └── student_records.sql (To be exported)
