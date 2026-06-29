@@ -1,5 +1,5 @@
 # Student Records Management System
-****
+
 ## Features
     - Dashboard
     - Add Student
