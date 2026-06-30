@@ -72,181 +72,165 @@ if (isset($_POST['update_student'])) {
 
 <div class="container mt-5">
 
-<div class="row justify-content-center">
+    <div class="row justify-content-center">
 
-<div class="col-lg-8">
+        <div class="col-lg-8">
 
-<div class="card shadow border-0">
+            <div class="card shadow border-0">
 
-<div class="card-header bg-warning">
+                <div class="card-header bg-warning">
 
-<h4 class="text-white">
+                    <h4 class="text-white">
 
-<i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-pencil-square"></i>
 
-Edit Student
+                        Edit Student
 
-</h4>
+                    </h4>
 
-</div>
+                </div>
 
-<div class="card-body">
+                <div class="card-body">
 
-<?php if(isset($_SESSION['error'])) { ?>
-<div class="alert alert-danger alert-dismissible fade show">
-    <?php
+                    <?php if(isset($_SESSION['error'])) { ?>
+                    <div class="alert alert-danger alert-dismissible fade show">
+                        <?php
     echo $_SESSION['error'];
     unset($_SESSION['error']);
     ?>
-    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-</div>
-<?php } ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    <?php } ?>
 
-<form method="POST">
+                    <form method="POST">
 
-<div class="row">
+                        <div class="row">
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label>Matric Number</label>
+                                <label>Matric Number</label>
 
-<input type="text"
-name="matric_no"
-class="form-control"
-value="<?php echo $student['matric_no']; ?>">
+                                <input type="text" name="matric_no" class="form-control"
+                                    value="<?php echo $student['matric_no']; ?>">
 
-</div>
+                            </div>
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label>First Name</label>
+                                <label>First Name</label>
 
-<input type="text"
-name="first_name"
-class="form-control"
-value="<?php echo $student['first_name']; ?>">
+                                <input type="text" name="first_name" class="form-control"
+                                    value="<?php echo $student['first_name']; ?>">
 
-</div>
+                            </div>
 
-</div>
-<div class="row">
+                        </div>
+                        <div class="row">
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label>Last Name</label>
+                                <label>Last Name</label>
 
-<input type="text"
-name="last_name"
-class="form-control"
-value="<?php echo $student['last_name']; ?>">
+                                <input type="text" name="last_name" class="form-control"
+                                    value="<?php echo $student['last_name']; ?>">
 
-</div>
+                            </div>
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label>Gender</label>
+                                <label>Gender</label>
 
-<select name="gender" class="form-select">
+                                <select name="gender" class="form-select">
 
-<option <?php if($student['gender']=="Male") echo "selected"; ?>>Male</option>
+                                    <option <?php if($student['gender']=="Male") echo "selected"; ?>>Male</option>
 
-<option <?php if($student['gender']=="Female") echo "selected"; ?>>Female</option>
+                                    <option <?php if($student['gender']=="Female") echo "selected"; ?>>Female</option>
 
-</select>
+                                </select>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-<div class="mb-3">
+                        <div class="mb-3">
 
-<label>Department</label>
+                            <label>Department</label>
 
-<input type="text"
-name="department"
-class="form-control"
-value="<?php echo $student['department']; ?>">
+                            <input type="text" name="department" class="form-control"
+                                value="<?php echo $student['department']; ?>">
 
-</div>
+                        </div>
 
-<div class="row">
+                        <div class="row">
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label>Level</label>
+                                <label>Level</label>
 
-<select name="level" class="form-select">
+                                <select name="level" class="form-select">
 
-<?php
+                                    <?php
 $levels = ["100","200","300","400","500"];
 foreach($levels as $lvl){
 ?>
-<option value="<?php echo $lvl; ?>"
-<?php if($student['level']==$lvl) echo "selected"; ?>>
-<?php echo $lvl; ?>
-</option>
-<?php } ?>
+                                    <option value="<?php echo $lvl; ?>"
+                                        <?php if($student['level']==$lvl) echo "selected"; ?>>
+                                        <?php echo $lvl; ?>
+                                    </option>
+                                    <?php } ?>
 
-</select>
+                                </select>
 
-</div>
+                            </div>
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label>Email</label>
+                                <label>Email</label>
 
-<input type="email"
-name="email"
-class="form-control"
-value="<?php echo $student['email']; ?>">
+                                <input type="email" name="email" class="form-control"
+                                    value="<?php echo $student['email']; ?>">
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-<div class="mb-3">
+                        <div class="mb-3">
 
-<label>Phone</label>
+                            <label>Phone</label>
 
-<input type="text"
-name="phone"
-class="form-control"
-value="<?php echo $student['phone']; ?>">
+                            <input type="text" name="phone" class="form-control"
+                                value="<?php echo $student['phone']; ?>">
 
-</div>
+                        </div>
 
-<div class="d-flex gap-2">
+                        <div class="d-flex gap-2">
 
-<button type="submit"
-name="update_student"
-class="btn btn-warning text-white">
+                            <button type="submit" name="update_student" class="btn btn-warning text-white">
 
-<i class="bi bi-save"></i>
+                                <i class="bi bi-save"></i>
 
-Update Student
+                                Update Student
 
-</button>
+                            </button>
 
-<a href="view.php"
-class="btn btn-secondary">
+                            <a href="view.php" class="btn btn-secondary">
 
-Cancel
+                                Cancel
 
-</a>
+                            </a>
 
-</div>
+                        </div>
 
-</form>
+                    </form>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
 <?php include "../includes/footer.php"; ?>
-

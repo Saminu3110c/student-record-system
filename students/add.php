@@ -95,236 +95,201 @@
 
 <div class="container mt-5">
 
-<div class="row justify-content-center">
+    <div class="row justify-content-center">
 
-<div class="col-lg-8">
+        <div class="col-lg-8">
 
-<div class="card shadow border-0">
+            <div class="card shadow border-0">
 
-<div class="card-header bg-primary text-white">
+                <div class="card-header bg-primary text-white">
 
-<h4>
+                    <h4>
 
-<i class="bi bi-person-plus-fill"></i>
+                        <i class="bi bi-person-plus-fill"></i>
 
-Add New Student
+                        Add New Student
 
-</h4>
+                    </h4>
 
-</div>
+                </div>
 
-<div class="card-body">
+                <div class="card-body">
 
-<?php if(!empty($message)) { ?>
+                    <?php if(!empty($message)) { ?>
 
-<div class="alert alert-<?php echo $messageType; ?>">
+                    <div class="alert alert-<?php echo $messageType; ?>">
 
-<?php echo $message; ?>
+                        <?php echo $message; ?>
 
-</div>
+                    </div>
 
-<?php } ?>
+                    <?php } ?>
 
-<form method="POST">
+                    <form method="POST">
 
-<div class="row">
+                        <div class="row">
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label class="form-label">
+                                <label class="form-label">
 
-Matric Number
+                                    Matric Number
 
-</label>
+                                </label>
 
-<input
-type="text"
-name="matric_no"
-class="form-control"
-required>
+                                <input type="text" name="matric_no" class="form-control" required>
 
-</div>
+                            </div>
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label class="form-label">
+                                <label class="form-label">
 
-First Name
+                                    First Name
 
-</label>
+                                </label>
 
-<input
-type="text"
-name="first_name"
-class="form-control"
-required>
+                                <input type="text" name="first_name" class="form-control" required>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-<div class="row">
+                        <div class="row">
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label class="form-label">
+                                <label class="form-label">
 
-Last Name
+                                    Last Name
 
-</label>
+                                </label>
 
-<input
-type="text"
-name="last_name"
-class="form-control"
-required>
+                                <input type="text" name="last_name" class="form-control" required>
 
-</div>
+                            </div>
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label class="form-label">
+                                <label class="form-label">
 
-Gender
+                                    Gender
 
-</label>
+                                </label>
 
-<select
-name="gender"
-class="form-select"
-required>
+                                <select name="gender" class="form-select" required>
 
-<option value="">Select Gender</option>
+                                    <option value="">Select Gender</option>
 
-<option>Male</option>
+                                    <option>Male</option>
 
-<option>Female</option>
+                                    <option>Female</option>
 
-</select>
+                                </select>
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-<div class="mb-3">
+                        <div class="mb-3">
 
-<label class="form-label">
+                            <label class="form-label">
 
-Department
+                                Department
 
-</label>
+                            </label>
 
-<input
-type="text"
-name="department"
-class="form-control"
-required>
+                            <input type="text" name="department" class="form-control" required>
 
-</div>
+                        </div>
 
-<div class="row">
+                        <div class="row">
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label class="form-label">
+                                <label class="form-label">
 
-Level
+                                    Level
 
-</label>
+                                </label>
 
-<select
-name="level"
-class="form-select"
-required>
+                                <select name="level" class="form-select" required>
 
-<option value="">Select Level</option>
+                                    <option value="">Select Level</option>
 
-<option>100</option>
+                                    <option>100</option>
 
-<option>200</option>
+                                    <option>200</option>
 
-<option>300</option>
+                                    <option>300</option>
 
-<option>400</option>
+                                    <option>400</option>
 
-<option>500</option>
+                                    <option>500</option>
 
-</select>
+                                </select>
 
-</div>
+                            </div>
 
-<div class="col-md-6 mb-3">
+                            <div class="col-md-6 mb-3">
 
-<label class="form-label">
+                                <label class="form-label">
 
-Email
+                                    Email
 
-</label>
+                                </label>
 
-<input
-type="email"
-name="email"
-class="form-control">
+                                <input type="email" name="email" class="form-control">
 
-</div>
+                            </div>
 
-</div>
+                        </div>
 
-<div class="mb-3">
+                        <div class="mb-3">
 
-<label class="form-label">
+                            <label class="form-label">
 
-Phone
+                                Phone
 
-</label>
+                            </label>
 
-<input
-type="text"
-name="phone"
-class="form-control">
+                            <input type="text" name="phone" class="form-control">
 
-</div>
+                        </div>
 
-<div class="d-grid gap-2 d-md-flex">
+                        <div class="d-grid gap-2 d-md-flex">
 
-<button
-type="submit"
-name="save_student"
-class="btn btn-primary">
+                            <button type="submit" name="save_student" class="btn btn-primary">
 
-<i class="bi bi-save"></i>
+                                <i class="bi bi-save"></i>
 
-Save Student
+                                Save Student
 
-</button>
+                            </button>
 
-<button
-type="reset"
-class="btn btn-secondary">
+                            <button type="reset" class="btn btn-secondary">
 
-Reset
+                                Reset
 
-</button>
+                            </button>
 
-<a
-href="view.php"
-class="btn btn-success">
+                            <a href="view.php" class="btn btn-success">
 
-View Students
+                                View Students
 
-</a>
+                            </a>
 
-</div>
+                        </div>
 
-</form>
+                    </form>
 
-</div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
