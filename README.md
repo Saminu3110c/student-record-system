@@ -14,7 +14,7 @@
  - Clean folder structure
 
 ## Project Structure
-
+```pgsql
     student-record-system/
     │
     ├── includes/
@@ -31,3 +31,11 @@
     │
     ├── index.php
     └── student_records.sql (To be exported)
+```
+
+### The Core Team 
+- Saminu Isah - isah_s
+
+
+<span><i>Made at Mudiame University Irrua (MUI)</i></span>
+<span><img alt='Schools Logo' src='' width='20px' /></span>
